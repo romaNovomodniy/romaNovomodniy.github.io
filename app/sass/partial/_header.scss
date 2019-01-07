@@ -1,0 +1,173 @@
+.header {
+/*     background: linear-gradient(to bottom, #cfe7fa 0%,#6393c1 100%); */
+    background: url(https://britishschool.ua/wp-content/uploads/2018/02/IMG_7793-1920x400.jpg);
+    background-blend-mode: color-dodge;
+    background-color: rgba(0, 0, 0, .5);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);	
+	&__wrp {
+		padding: 75px 0 75px;
+		display: flex;
+		justify-content: center;	
+	}
+	&__top {
+
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .25);	
+        box-shadow: 0 1px 4px rgba(255, 255, 255, 1);   
+	}
+	&__logo {
+		width: 100px;
+		&--pic {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__text {
+		margin-left: 50px;
+		margin-right: 50px;
+		font: 60px $pnBold;
+		color: white;
+		text-shadow: 3px 5px 6px black;
+	}
+	&__arrow {
+		margin-top: 27px;
+		margin-left: -15px;
+		height:5px;
+	}
+}
+
+.languages {
+	width: 70px;
+	height: 60px;
+	position: relative;
+	overflow: hidden;
+	transition: all 500ms;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	&__item {
+		display: block;
+		text-transform: uppercase;
+		font-family: "BebasNeue Bold";
+		font-size: 18px;
+		letter-spacing: 2px;
+		text-decoration: none;
+		color: white;
+	}
+}
+
+.langblock.active {
+    right: 0;
+    transition-delay: 0ms;
+}
+
+.langblock {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1001;
+    padding: 50px 94px 20px 94px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    transition-delay: 500ms;
+    &::before {
+    	content: '';
+    	background-image: url(../images/pattern.png);
+    	position: absolute;
+    	top: 0;
+    	left: 21px;
+    	display: block;
+    	width: 52px;
+    	height: 100%;
+    }
+  }
+  .langblock.active>:first-child {
+    transition-delay: 100ms;
+}
+.langblock.active>* {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.langblock__close {
+    width: 25px;
+    height: 25px;
+    stroke: #000;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.langblock>* {
+    transform: translateY(200px);
+    opacity: 0;
+}
+.langblock__headline {
+    font-family: "BebasNeue Bold";
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.langblock__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.langblock__item {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 1%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.langblock__item.active, .langblock__item:hover {
+    background-color: #212121;
+}
+
+.langblock__item.active>span, .langblock__item:hover>span {
+    color: white;
+}
+
+.langblock__item>span {
+    color: #212121;
+    font-family: "BebasNeue Bold";
+    margin-left: 5px;
+}
+.langblock.active>:first-child {
+    transition-delay: 100ms;
+}
+.langblock.active>* {
+    transform: translateY(0);
+    opacity: 1;
+}
+.langblock>:first-child {
+    transition-delay: 50ms;
+}
+.langblock.active>:nth-child(3) {
+    transition-delay: 300ms;
+}
